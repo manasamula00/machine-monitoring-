@@ -1,0 +1,96 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and overall page layout */
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    background: linear-gradient(45deg, #0000ff, #ffffff, #00008b); /* Blue to White to Dark Blue */
+    background-size: 300% 300%;
+    animation: gradientBackground 12s ease infinite;
+    overflow: hidden;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Animated Background */
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Data Container */
+.container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Hover Effect */
+.container:hover {
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+.image-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 400px;
+    height: auto;
+}
+
+/* Header */
+h1 {
+    font-size: 26px;
+    font-weight: 500;
+    color: #4CAF50;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* Data Display */
+.Temperature, .Current, .Vibration {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px 0;
+    color: #333;
+}
+
+.Temperature span, .Current span, .Vibration span {
+    font-size: 32px;
+    font-weight: 700;
+    color: #FF5722;
+}
+
+/* Status Message */
+.status {
+    font-size: 16px;
+    color: #8e8e8e;
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
+    color: #ffffff;
+}
